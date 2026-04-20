@@ -1,49 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TP3 - Especificidad CSS</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		body {
+			font-size: 18px;
+			background-color: #ffe;
+			color: #210;
+		}
 
+		#contenedor {
+			max-width: 40ch;
+			margin: 2rem auto;
+			padding: 1rem;
+		}
 
-/* Centrar el h1 */
-h1 {
-  text-align: center;
-}
+		h1 {
+			font-size: 2rem;
+			text-align: center;
+		}
 
-/* Fuente serif para todos los párrafos */
-p {
-  font-family: serif;
-}
+		p {
+			font-family: serif;
+            background-color: rgba(190, 120, 240, 0.6);
+		}
 
-/* Fondo para el primer párrafo */
-#primer-parrafo {
-  background-color: #CEE;
-}
+		#primer-parrafo {
+			font-size: 1.3rem;
+			background-color:  #CEE;
+		}
 
-/* Color para <em> dentro del primer párrafo */
-#primer-parrafo em {
-  color: #933;
-}
+		p.importante em {
+			font-weight: bold;
+			color: #933;
+		}
 
-/* Outline para todos los links */
-a {
-  outline: 1px solid #333;
-}
+		p.novelas a {
+			outline: 1px solid #333;
+			text-decoration: none;
+		}
+		p.novelas a:hover {
+			text-decoration: underline;
+			background-color: #ccd;
+		}
 
-/* Opacidad 100% para p con clase fuente */
-p.fuente {
-  opacity: 100%;
-}
+		body p.fuente.parrafo {
+			color: #bbb !important;
+			font-size: 0.9rem;
+			opacity: 100%;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<article id="contenedor">
+		<h1 class="titulo">Gandalf</h1>
+		
+		<p id="primer-parrafo" class="importante parrafo">
+			Gandalf es un personaje ficticio perteneciente al <em>legendarium</em> del escritor británico <a href="https://es.wikipedia.org/wiki/J._R._R._Tolkien">J. R. R. Tolkien.</a>
+		</p>
+		
+		<p class="novelas parrafo">
+			Es uno de los principales personajes de las novelas <a href="https://es.wikipedia.org/wiki/El_hobbit">El hobbit</a> y <a href="https://es.wikipedia.org/wiki/El_Señor_de_los_Anillos">El Señor de los Anillos</a>, aunque también aparece en <span class="complicado" style="color: #622">El Silmarillion</span>, donde se narran sus orígenes.
+		</p>
+	</article>
 
-/* Párrafos sin id */
-p:not([id]) {
-  background-color: rgba(190, 120, 240, 0.6);
-}
-
-/* BONUS */
-
-/* Color negro para p.fuente */
-p.fuente {
-  color: #000;
-}
-
-/* Clase complicado en negrita y color */
-.complicado {
-  font-weight: bold;
-  color: #C62;
-}
+	<p class="fuente parrafo">
+		Fuente: <a href="https://es.wikipedia.org/wiki/Gandalf">https://es.wikipedia.org/wiki/Gandalf</a>
+	</p>
+</body>
+</html>
