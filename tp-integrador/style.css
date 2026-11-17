@@ -105,4 +105,60 @@ footer {
     }
 }
 
+/* Ventana que aparece al entrar a una provincia */
+.detalle-provincia {
+    width: min(90%, 520px);
+    border: 0;
+    border-radius: 18px;
+    padding: 0;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.detalle-provincia::backdrop {
+    background: rgba(10, 30, 45, 0.65);
+}
+
+.detalle-contenido {
+    position: relative;
+    padding: 36px 28px 30px;
+    text-align: center;
+}
+
+.detalle-contenido h2 {
+    color: #164d70;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.btn-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    border: 0;
+    background: transparent;
+    color: #526273;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.dato-poblacion {
+    color: #526273;
+    margin-bottom: 5px;
+}
+
+.numero-habitantes {
+    color: #164d70;
+    font-size: 28px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.nota-censo {
+    color: #66849a;
+    font-size: 12px;
+    margin-bottom: 22px;
+}
+
+.ver-provincia {
+    margin-top: 4px;
 }
