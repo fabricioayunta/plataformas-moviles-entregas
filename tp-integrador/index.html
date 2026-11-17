@@ -19,6 +19,7 @@
 
     <main class="container py-5">
         <input id="buscador" class="form-control mb-4" type="text" placeholder="Buscar provincia por nombre...">
+        <div id="sinResultados" class="alert alert-warning text-center d-none" role="alert"></div>
 
         <div id="provincias" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
             <div class="col-12 text-center">
@@ -27,6 +28,20 @@
             </div>
         </div>
     </main>
+
+    <dialog id="detalleProvincia" class="detalle-provincia">
+        <div class="detalle-contenido">
+            <button id="cerrarDetalle" class="btn-cerrar" type="button" aria-label="Cerrar">×</button>
+            <p class="provincia-numero">CONOCÉ ARGENTINA</p>
+            <h2 id="nombreProvincia"></h2>
+            <p class="dato-poblacion">Habitantes según el Censo 2022:</p>
+            <p id="habitantesProvincia" class="numero-habitantes"></p>
+            <p class="nota-censo">Fuente: INDEC · Censo Nacional de Población, Hogares y Viviendas 2022.</p>
+            <a id="mapaProvincia" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+                Ver ubicación en Google Maps
+            </a>
+        </div>
+    </dialog>
 
     <footer class="text-center py-4">
         <p class="mb-0">Proyecto de Plataformas Móviles · Datos obtenidos de una API externa</p>
